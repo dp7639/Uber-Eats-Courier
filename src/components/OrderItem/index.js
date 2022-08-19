@@ -25,7 +25,8 @@ const OrderItem = ({ order }) => {
       onPress={() => navigation.navigate('OrdersDeliveryScreen', {id: order.id})}
     >
       <Image
-        source={{ uri: order.Restaurant.image }}
+        // source={{ uri: order.Restaurant.image }}
+        source={{ uri: order?.Restaurant?.image }}
         style={{
           width: "25%",
           height: "100%",
@@ -35,9 +36,12 @@ const OrderItem = ({ order }) => {
       />
       <View style={{ flex: 1, marginLeft: 10, paddingVertical: 5 }}>
         <Text style={{ fontSize: 18, fontWeight: "500" }}>
-          {order.Restaurant.name}
+          {order?.Restaurant?.name}
+          {/* {order.Restaurant.name} */}
         </Text>
-        <Text style={{ color: "grey" }}>{order.Restaurant.address}</Text>
+        <Text style={{ color: "grey" }}>{order?.Restaurant?.address}
+        {/* {order.Restaurant.address} */}
+        </Text>
 
         <Text style={{ marginTop: 10 }}>Delivery Details:</Text>
         <Text style={{ color: "grey" }}>{user?.name}</Text>

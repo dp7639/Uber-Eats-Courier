@@ -7,6 +7,7 @@ import { withAuthenticator } from "aws-amplify-react-native";
 import awsconfig from "./src/aws-exports";
 import AuthContextProvider from "./src/contexts/AuthContext";
 import OrderContextProvider from "./src/contexts/OrderContext";
+import 'react-native-gesture-handler';
 
 import { LogBox } from "react-native";
 LogBox.ignoreLogs(["Setting a timer"]);
