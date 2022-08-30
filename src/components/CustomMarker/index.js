@@ -6,14 +6,10 @@ const CustomMarker = ({ data, type }) => {
   return (
     <Marker
       coordinate={{
-        // latitude: data.lat,
         latitude: data?.lat,
-        // longitude: data.lng,
         longitude: data?.lng,
       }}
-      // title={data.name}
       title={data?.name}
-      // description={data.address}
       description={data?.address}
     >
       <View style={{ backgroundColor: "green", padding: 5, borderRadius: 20 }}>
